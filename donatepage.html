@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dontate page</title>
+
+    
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ <script src="script.js"></script>   
+  
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    
+
+    <nav class="navbar">
+        <ul>
+            <li><a  href="index.html">home</a></li>
+            <li><a class="active" href="contact_us.html">contact us</a></li>
+        
+            
+        </ul>
+    </nav>
+
+ 
+</header>
+
+<!-- header section ends -->
+
+<section class="customers1">
+         
+            <div class=" card" id="first" >
+                <form id="myForm" >
+                    <label id="lab2" style="color: white; font-size: 25px;padding-right:170px;  "> Name</label>
+                    <input style="height:40px;width: 250px;" id ="selc"  type="text" placeholder="Name" required><br>  <br>  <br> <br>  <br>  <br>                   
+                    <label id="lab2" style="color: white; font-size: 25px;padding-right:170px"> Email</label>
+                    <input  style="width: 250px; height:40px ;"id ="selc" type="email" placeholder="Email" required><br>  <br>  <br><br>  <br>  <br>  
+                <label id="lab2" style="color: white; font-size: 25px;padding-right:40px; "> Donation amount</label>
+                <input required id="selc" style="height:40px;width: 250px;" placeholder="$" type="number" name="amount">
+                <label id="lab2" style="color: white; font-size: 25px;padding-right:40px; "> Donate by</label>
+                <button id="Transfer" type="button" onclick="showDiv()" style="width:250px ;font-size:26px">Next  </button>
+      
+            </div>
+            <div  style="display:none" class=" card" id="next" >
+                <form id="myForm" >
+                    <label id="lab1" style="color: white; font-size: 25px;padding-right:40px;  ">Confirm your payment</label><br>  <br>  <br> <br>  <br>  <br>       
+                    <label id="lab2" style="color: white; font-size: 25px;padding-right:70px;  "> Owner</label>
+                    <input style="height:40px;width: 250px;" id ="selc"  type="text"  required><br>  <br>  <br> <br>  <br>  <br>                   
+                    <label id="lab2" style="color: white; font-size: 25px;padding-right:100px"> CVV</label>
+                    <input  style="width: 250px; height:40px ;"id ="selc" type="password" required><br>  <br>  <br><br>  <br>  <br>
+                    <label id="lab2" style="color: white; font-size: 25px;padding-right:5px"> Card number</label>
+                    <input  style="width: 250px; height:40px ;"id ="selc" type="number" required><br>  <br>  <br><br>  <br>  <br>
+                    <label id="lab2" style="color: white; font-size: 25px;padding-right:80px"> Expiry</label>
+                    <input  style="width: 250px; height:40px ;"id ="selc" type="date" required><br>  <br>  <br><br>  <br>  <br>
+                <button id="Transfer1" type="button" onclick="showDiv1()" style="width:200px ;font-size:26px; margin-right:40px ">Back </button>
+                <button id="Transfer1" type="button" onclick="showDiv2()" style="width:200px ;font-size:26px">Next </button>
+      
+            </div>
+            
+            <style>
+                #lab2:after {
+                  content:" *";
+                  color: red;
+                }
+              </style>
+            
+            
+
+       
+        </body>
+        </html>       
+                    

@@ -32,6 +32,7 @@
 
 
 
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -239,6 +240,17 @@ body{
     flex-wrap: wrap;
     width: 100%;
     background: url(../images/44161424.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.customers1{
+    display: flex;
+    align-items:left;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: url(../images/stock-photo-wood-frame-texture-wooden-wallpaper-table-board-background-blank-81d18885-3859-4c33-ace5-88595b2dc7cb.jpg)no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
