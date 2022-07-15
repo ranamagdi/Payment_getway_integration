@@ -105,7 +105,7 @@ footer {
 }
 #lab1{
     color: 
-    hsl(0, 0%, 100%);
+    #fff;
     font-weight: 500 ; 
     font-size:30px;
     font-weight: 200;
@@ -146,6 +146,21 @@ footer {
               margin-left: 40%;
               margin-right: 40%;
           }
+          #Transfer1 {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #020202;
+            background-color: #fd7f2b;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 7px rgb(153, 10, 0);
+            margin-top: 5%; 
+        }         
 
 
 
