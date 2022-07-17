@@ -9,10 +9,13 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://js.stripe.com/v3"></script>
+
 
 </head>
 <body>
- <script src="script.js"></script>   
+ <script src="script.js"></script> 
+ 
   
 <!-- header section starts  -->
 
@@ -33,12 +36,26 @@
 
  
 </header>
+<script src="https://www.paypal.com/sdk/js?client-id=AXVUmhRXcZngZfAoNL6BrfXRSF_sqvxhGaEcBctFIW1jxD-dm2dwVmcQ_fbAXJesMfYUly58a574pskT&locale=en_US"></script>
+<script>
+    paypal.Buttons({
+        createOrder:function(data,actions){
+            return actions.order.create({
+                purchase_units:[{
+                    amount:{
+                        value:'299.99'
+                    }
+                }]
+            });
 
+        }
+    }).render('#paypal-button-container')
+</script>
 <!-- header section ends -->
 
 <section class="customers1">
          
-            <div class=" card" id="first" >
+            <div class=" card" id="first" style="background-color: rgba(104, 104, 104, 0.295);" >
                 <form id="myForm" >
                     <label id="lab2" style="color: white; font-size: 25px;padding-right:170px;  "> Name</label>
                     <input style="height:40px;width: 250px;" id ="selc"  type="text" placeholder="Name" required><br>  <br>  <br> <br>  <br>  <br>                   
@@ -46,26 +63,17 @@
                     <input  style="width: 250px; height:40px ;"id ="selc" type="email" placeholder="Email" required><br>  <br>  <br><br>  <br>  <br>  
                 <label id="lab2" style="color: white; font-size: 25px;padding-right:40px; "> Donation amount</label>
                 <input required id="selc" style="height:40px;width: 250px;" placeholder="$" type="number" name="amount">
-                <label id="lab2" style="color: white; font-size: 25px;padding-right:40px; "> Donate by</label>
-                <button id="Transfer" type="button" onclick="showDiv()" style="width:250px ;font-size:26px">Next  </button>
+                
+                <button id="Transfer" type="button" onclick="showDiv()" style="width:250px ;font-size:26px ;margin-left:330px">pay now  </button>
       
             </div>
-            <div  style="display:none" class=" card" id="next" >
-                <form id="myForm" >
-                    <label id="lab1" style="color: white; font-size: 25px;padding-right:40px;  ">Confirm your payment</label><br>  <br>  <br> <br>  <br>  <br>       
-                    <label id="lab2" style="color: white; font-size: 25px;padding-right:70px;  "> Owner</label>
-                    <input style="height:40px;width: 250px;" id ="selc"  type="text"  required><br>  <br>  <br> <br>  <br>  <br>                   
-                    <label id="lab2" style="color: white; font-size: 25px;padding-right:100px"> CVV</label>
-                    <input  style="width: 250px; height:40px ;"id ="selc" type="password" required><br>  <br>  <br><br>  <br>  <br>
-                    <label id="lab2" style="color: white; font-size: 25px;padding-right:5px"> Card number</label>
-                    <input  style="width: 250px; height:40px ;"id ="selc" type="number" required><br>  <br>  <br><br>  <br>  <br>
-                    <label id="lab2" style="color: white; font-size: 25px;padding-right:80px"> Expiry</label>
-                    <input  style="width: 250px; height:40px ;"id ="selc" type="date" required><br>  <br>  <br><br>  <br>  <br>
-                <button id="Transfer1" type="button" onclick="showDiv1()" style="width:200px ;font-size:26px; margin-right:40px ">Back </button>
-                <button id="Transfer1" type="button" onclick="showDiv2()" style="width:200px ;font-size:26px">Next </button>
-      
+            <div  style="display:none;background-color:rgba(104, 104, 104, 0.295)"; class=" card" id="next" >
+                <label id="lab1" style="color: white; font-size: 26px;padding-right:45x;  "> Please select the payment method you're preferred</label>  
+                <div style="margin-top: 120px; margin-bottom: 30px;" id="paypal-button-container" >   
+
+                </div>
+                <button id="Transfer1" type="button" onclick="showDiv1()" style=" color:aliceblue; box-shadow: 0 7px#fd7f2b;; background-color: #1b1b1b;width:150px ;font-size:26px;margin-right: 70%; ">Back </button>
             </div>
-            
             <style>
                 #lab2:after {
                   content:" *";
