@@ -43,13 +43,17 @@
             return actions.order.create({
                 purchase_units:[{
                     amount:{
-                        value:'299.99'
+                        value:document.getElementById("amount").value
                     }
                 }]
             });
 
         }
+        
     }).render('#paypal-button-container')
+        
+    
+       
 </script>
 <!-- header section ends -->
 
@@ -62,7 +66,7 @@
                     <label id="lab2" style="color: white; font-size: 25px;padding-right:170px"> Email</label>
                     <input  style="width: 250px; height:40px ;"id ="selc" type="email" placeholder="Email" required><br>  <br>  <br><br>  <br>  <br>  
                 <label id="lab2" style="color: white; font-size: 25px;padding-right:40px; "> Donation amount</label>
-                <input required id="selc" style="height:40px;width: 250px;" placeholder="$" type="number" name="amount">
+                <input required id="amount" style="height:40px;width: 250px;" placeholder="$" type="number" name="amount">
                 
                 <button id="Transfer" type="button" onclick="showDiv()" style="width:250px ;font-size:26px ;margin-left:330px">pay now  </button>
       
@@ -72,8 +76,10 @@
                 <div style="margin-top: 120px; margin-bottom: 30px;" id="paypal-button-container" >   
 
                 </div>
-                <button id="Transfer1" type="button" onclick="showDiv1()" style=" color:aliceblue; box-shadow: 0 7px#fd7f2b;; background-color: #1b1b1b;width:150px ;font-size:26px;margin-right: 70%; ">Back </button>
+                <button id="Transfer1" type="button"  onclick="showDiv1()" style=" color:aliceblue; box-shadow: 0 7px#fd7f2b;; background-color: #1b1b1b;width:150px ;font-size:26px;margin-right: 70%; ">Back </button>
             </div>
+
+             <div style="display:none" id="then"></div>
             <style>
                 #lab2:after {
                   content:" *";
