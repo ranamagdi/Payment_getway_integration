@@ -16,7 +16,7 @@
 
 
 *::selection{
-    background:#774401;
+    background:#da4500;
     color:#fff;
 }
 
@@ -43,7 +43,7 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track{
-    background:#333;
+    background:rgb(1, 0, 7);
 }
 
 html::-webkit-scrollbar-thumb{
@@ -70,7 +70,7 @@ html::-webkit-scrollbar-thumb{
     font-size: 20px;
   }
 section{
-    min-height: 120vh;
+    min-height: 150vh;
     padding:1rem 7%;
     padding-top:6rem;
 }
@@ -143,7 +143,7 @@ footer {
               border: none;
               border-radius: 15px;
               box-shadow: 0 7px rgb(153, 10, 0);
-              margin-top: 10%;       
+              margin-top: 3%;       
               margin-left: 40%;
               margin-right: 40%;
           }
