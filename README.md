@@ -5,4 +5,4 @@ Clone this repo and create paypal development account to can use the test mode o
 ## Payment getway used:
 paypal
 ## Deployment version:
- You can go to this link  [payment.great-site.net] (Link)to see the deployment version
+ You can go to this link <a href="payment.great-site.net" target="_blank">Link</a>to see the deployment version
